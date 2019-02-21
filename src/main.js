@@ -17,6 +17,7 @@ const routes = [
     component: Register
   }
 ]
+
 const router = new VueRouter({
   mode: 'history',
   routes
