@@ -7,6 +7,7 @@ import 'buefy/dist/buefy.css'
 import '@/sass/styles.scss'
 
 import Register from './components/Register.vue'
+import Login from './components/Login.vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false
@@ -15,6 +16,10 @@ const routes = [
   {
     path: '/register',
     component: Register
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ]
 
