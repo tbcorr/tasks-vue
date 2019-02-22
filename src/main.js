@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vuex from 'vuex'
 
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
@@ -12,6 +13,8 @@ import Admin from './components/Admin.vue'
 import Profile from './components/Profile.vue'
 import Tasks from './components/Tasks.vue'
 import App from './App.vue'
+
+import createStore from './store.js'
 
 Vue.config.productionTip = false
 
@@ -47,8 +50,12 @@ const router = new VueRouter({
 
 Vue.use(Buefy)
 Vue.use(VueRouter)
+Vue.use(Vuex)
+
+const store = createStore();
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
